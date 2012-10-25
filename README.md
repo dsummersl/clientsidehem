@@ -25,9 +25,9 @@ To 'start up' the dependencies tell npm to download all your dependencies:
 
 ## Adding dependencies
 
-Use npm to search for a specific dependency and then modify the package.json file
-to ensure that the dependency is tracked in the future. Then specify the dependency
-for your application in slug.json.
+Use npm to search for a specific dependency and then modify the package.json
+file to ensure that the dependency is tracked in the future. Then specify the
+dependency for your application in slug.json.
 
 For example, suppose you wanted to add the coffee-script dependency. Just use npm 
 to install the dependency and save it to your package.json file:
@@ -41,24 +41,33 @@ registry. You can add it to your project in the following way:
     1. npm --save install https://github.com/dsummersl/bloomfilters/tarball/master
     2. Manually edit the slug.json file. Add "bloomfilters" to "dependencies".
 
-## Local files
+## Local modules
 
 If you want to include your own coffee or javascript you can do so by adding
 those files to the app/ folder. Note that in order to expose your script via
 the 'require' method you must make it a CommonJS module. It is very simple -
 see [the hem docs](http://spinejs.com/docs/hem).
 
+## Local files
+
 If you want to include non-CommonJS non 'require' code you can also stitch that
 by referencing your custom javascript or coffeescript via the 'libs' list in
 slug.json.
 
-
 ## CSS
 
-Hem will stitch together your CSS to, if you want. See the hem docs.
+Hem will stitch together your CSS to, if you want. See [the hem docs](http://spinejs.com/docs/hem).
 
 # Building
 
 Once you have your dependencies listed, you can use hem to stitch them all together.
 
+    # make sure all dependencies are present:
+    npm install .
+    # make public/application.js
     hem build
+
+# Notes
+
+Hem was meant for the [spinejs](http://spinejs.com) project - but you don't
+have to use it for that. Ignore any docs mentioning spine as you wish...

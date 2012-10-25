@@ -2,6 +2,7 @@
   "name": "clientsidehem",
   "version": "0.0.1",
   "dependencies": {
-    "underscore": "~1.4.2"
+    "underscore": "~1.4.2",
+    "jqueryify": "0.0.3"
   }
 }

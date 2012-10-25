@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="application.css" type="text/css" charset="utf-8">
+  <script src="application.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    var $ = require('jqueryify');
+    $(function() {
+      var _ = require('underscore/underscore');
+      _.each(_.shuffle([1,2,3,4,5]), function(num) {
+        console.log("num:"+ num);
+        $('#adiv').append('<b>'+ num +'</b><hr/>');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="adiv"></div>
+</body>
+</html>

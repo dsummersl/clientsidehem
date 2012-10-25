@@ -2,6 +2,7 @@
   "public": "./public",
   "libs": [],
   "dependencies": [
-    "underscore"
+    "underscore",
+    "jqueryify"
   ]
 }
